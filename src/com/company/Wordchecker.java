@@ -1,24 +1,34 @@
 package com.company;
 
-public class Wordchecker implements Stringchecker{
-    private int maxLen;
-    private int minLen;
-    private String symbol;
 
-    public Wordchecker(int maxLen,int minLen, String symbol){
-        this.maxLen=maxLen;
-        this.minLen=minLen;
-        this.symbol=symbol;
-    }
-    public Wordchecker(String symbol)
+
+public class CodeWordChecker implements Stringchecker {
+    private int min;
+    private int max;
+    private String sym;
+    public CodeWordChecker(int min, int max, String sym)
     {
-        this.symbol=symbol;
+        this.min = min;
+        this.max = max;
+        this.sym = sym;
     }
 
-
-
-    public boolean isValid(){
-      if()
+    public CodeWordChecker(String sym )
+    {
+        this.sym = sym;
     }
+
+    public boolean isValid(String str)
+    {
+        if((str.length() < min) || (str.length() > max) || (str.contains(sym)))
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
 
 }

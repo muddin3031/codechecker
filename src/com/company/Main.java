@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 	Stringchecker sc1 = new CodeWordChecker(5,6,"$");
-	Stringchecker sc2 = new CodewordChecker("pass");
+	Stringchecker sc2 = new CodeWordChecker("pass");
 
 	System.out.println(sc1.isValid("happy"));
 	System.out.println(sc1.isValid("happy$"));
